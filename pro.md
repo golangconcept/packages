@@ -36,10 +36,10 @@ You need to develop a combination of strong programming skills, understanding of
   Write clean, maintainable code using idiomatic Go.
 - Understand and apply design patterns relevant to Go, like Singleton, Factory, and Dependency Injection.
 
-7. Concurrency Patterns
+7. **Concurrency Patterns**
 
-- Learn about concurrency patterns like worker pools, fan-out/fan-in, and the publish-subscribe model.
-- Understand the differences between goroutines and threads, and how to effectively manage state across them.
+- Learn about concurrency patterns like `worker pools`, `fan-out/fan-in`, and the `publish-subscribe` model.
+- Understand the differences between `goroutines` and `threads`, and how to effectively manage state across them.
 
 8. Web Development
 
