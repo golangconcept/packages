@@ -13,4 +13,10 @@ The os package provides a platform-independent interface to operating system fun
 
 ### 2 Working with Environment Variables
 
+    - Getting an Environment Variable
+    - Setting an Environment Variable
+
 ### 3 Process Management
+
+    - Exiting a Program
+    - Command-line Arguments
