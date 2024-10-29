@@ -20,3 +20,12 @@ The `fmt package` in Go provides formatted `I/O` functions, similar to C's `prin
 
 - `Sprintf`: Formats and returns a string.
 - `Sscanf`: Reads formatted input from a string.
+
+## Formatting Strings
+
+You can format strings using various verbs:
+
+- `%s`: string
+- `%d`: integer
+- `%f`: float
+- `%v`: default format
