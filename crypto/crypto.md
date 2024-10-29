@@ -15,3 +15,11 @@ HMAC combines a `cryptographic` hash function with a secret key to provide messa
 ### Encryption and Decryption
 
 Go supports various encryption algorithms, including `AES` (Advanced Encryption Standard).
+
+### Public Key Cryptography
+
+Go supports `RSA` and `ECDSA` for public key encryption.
+
+### Certificate Management
+
+Go's `crypto/x509` package provides functions for parsing and creating `X.509` certificates.
