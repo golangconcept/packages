@@ -10,3 +10,21 @@ This can be particularly useful for tasks like building `generic functions`, cre
 - `reflect.Value`: Represents the value of a Go variable.
 
 - Functions like `reflect.TypeOf()`, `reflect.ValueOf()`, and others to inspect and manipulate types and values.
+
+```go
+package main
+
+import (
+    "fmt"
+    "reflect"
+)
+
+func main() {
+    var x int = 42
+    t := reflect.TypeOf(x)   // Get the type
+    v := reflect.ValueOf(x)  // Get the value
+
+    fmt.Println("Type:", t)   // Output: Type: int
+    fmt.Println("Value:", v)   // Output: Value: 42
+}
+```
