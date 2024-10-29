@@ -6,17 +6,33 @@ The os package provides a platform-independent interface to operating system fun
 
 ### 1 Working with Files and Directories
 
-    - Creating a File
-    - Writing to a File
-    - Reading from a File
-    - Listing Files in a Directory
+- Creating a File
+- Writing to a File
+- Reading from a File
+- Listing Files in a Directory
+
+```go
+func main() {
+ files, err := ioutil.ReadDir(".") // Read current directory
+ if err != nil {
+     log.Fatal(err)
+ }
+ for _, file := range files {
+     log.Println(file.Name())
+ }
+}
+```
 
 ### 2 Working with Environment Variables
 
-    - Getting an Environment Variable
-    - Setting an Environment Variable
+- Getting an Environment Variable
+- Setting an Environment Variable
 
 ### 3 Process Management
 
-    - Exiting a Program
-    - Command-line Arguments
+- Exiting a Program
+- Command-line Arguments
+
+```
+
+```
