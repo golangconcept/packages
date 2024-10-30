@@ -22,3 +22,9 @@ the `math package` provides a variety of mathematical functions and constants th
 - `math.Min(x, y float64)`: Returns the lesser of x or y.
 - `math.Floor(x float64)`: Returns the largest integer value less than or equal to x.
 - `math.Ceil(x float64)`: Returns the smallest integer value greater than or equal to x.
+
+### Constants
+The math package also defines several constants:
+
+- math.Pi: The value of π (pi).
+- math.E: The value of Euler's number (e).
