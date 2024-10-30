@@ -19,3 +19,7 @@ the strings package provides various functions to manipulate and work with strin
 
 - `strings.Split(s, sep string)`: Splits the string s into a slice of substrings separated by the string sep.
 - `strings.Join(a []string, sep string)`: `Joins` the elements of the slice a into a single string, separated by the string sep.
+
+## String Length
+
+- `len(s)`: Returns the number of bytes in the string s.
