@@ -45,3 +45,44 @@ if err := http.ListenAndServe(":8080", nil); err != nil {
 
 - `http.ListenAndServe(":8080", nil)`: This starts an HTTP server that listens on port 8080. `The second argument (nil) means it will use the default multiplexer`, which handles routing requests to registered handlers.
 - If there's an error starting the server, it prints an error message.
+
+**Note:**
+
+### Custom http.ServeMux Instance
+
+You can create your own instance of http.ServeMux, which is a multiplexer for routing HTTP requests to different handlers.
+
+```go
+package main
+
+import (
+    "fmt"
+    "net/http"
+)
+
+func helloHandler(w http.ResponseWriter, r *http.Request) {
+    fmt.Fprintf(w, "Hello, World!")
+}
+
+func aboutHandler(w http.ResponseWriter, r *http.Request) {
+    fmt.Fprintf(w, "This is the About Page!")
+}
+
+func main() {
+    mux := http.NewServeMux() // Create a new ServeMux instance
+
+    // Register routes
+    mux.HandleFunc("/", helloHandler)
+    mux.HandleFunc("/about", aboutHandler)
+
+    // Start the server using the custom ServeMux
+    fmt.Println("Server is running on http://localhost:8080")
+    if err := http.ListenAndServe(":8080", mux); err != nil {
+        fmt.Println("Error starting server:", err)
+    }
+}
+```
+
+### Third-Party Router (e.g., Gorilla Mux)
+
+Using a third-party router like Gorilla Mux allows for more advanced routing capabilities, including route variables and middleware support.
