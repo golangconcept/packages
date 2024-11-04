@@ -23,4 +23,13 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 
 ### Functionality:
 
-The fmt.Fprintf function writes "Hello, World!" to the response writer, which sends it back to the client.
+The fmt.Fprintf function writes "Hello, World!" to the response writer, which sends it back to the `client`.
+
+**Main Function:**
+
+```go
+func main() {
+    http.HandleFunc("/", helloHandler)
+```
+
+- `http.HandleFunc("/", helloHandler)`: This registers the helloHandler function to handle requests to the root URL (/). When a request is made to this path, helloHandler will be invoked.
