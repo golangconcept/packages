@@ -85,4 +85,36 @@ func main() {
 
 ### Third-Party Router (e.g., Gorilla Mux)
 
-Using a third-party router like Gorilla Mux allows for more advanced routing capabilities, including route variables and middleware support.
+Using a third-party router like `Gorilla Mux` allows for more advanced routing capabilities, including `route variables` and `middleware` support.
+
+```go
+package main
+
+import (
+    "fmt"
+    "net/http"
+    "github.com/gorilla/mux"
+)
+
+func helloHandler(w http.ResponseWriter, r *http.Request) {
+    fmt.Fprintf(w, "Hello, World!")
+}
+
+func aboutHandler(w http.ResponseWriter, r *http.Request) {
+    fmt.Fprintf(w, "This is the About Page!")
+}
+
+func main() {
+    r := mux.NewRouter() // Create a new Gorilla Mux router
+
+    // Register routes
+    r.HandleFunc("/", helloHandler)
+    r.HandleFunc("/about", aboutHandler)
+
+    // Start the server using the Gorilla Mux router
+    fmt.Println("Server is running on http://localhost:8080")
+    if err := http.ListenAndServe(":8080", r); err != nil {
+        fmt.Println("Error starting server:", err)
+    }
+}
+```
