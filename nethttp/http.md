@@ -33,3 +33,15 @@ func main() {
 ```
 
 - `http.HandleFunc("/", helloHandler)`: This registers the helloHandler function to handle requests to the root URL (/). When a request is made to this path, helloHandler will be invoked.
+
+**Starting the Server:**
+
+```go
+fmt.Println("Server is running on http://localhost:8080")
+if err := http.ListenAndServe(":8080", nil); err != nil {
+    fmt.Println("Error starting server:", err)
+}
+```
+
+- `http.ListenAndServe(":8080", nil)`: This starts an HTTP server that listens on port 8080. `The second argument (nil) means it will use the default multiplexer`, which handles routing requests to registered handlers.
+- If there's an error starting the server, it prints an error message.
