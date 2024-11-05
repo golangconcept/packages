@@ -12,3 +12,18 @@ You can install Viper using go get:
 ```sh
 go get github.com/spf13/viper
 ```
+
+## 2. Basic Usage Example
+
+Let’s start by creating a simple Go application that reads a configuration from a file.
+
+**Folder Structure:**
+
+```lua
+/project-root
+    /config
+        config.yaml
+    main.go
+    go.mod
+
+```
