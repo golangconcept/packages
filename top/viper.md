@@ -27,3 +27,16 @@ Let’s start by creating a simple Go application that reads a configuration fro
     go.mod
 
 ```
+
+```yaml
+# config.yaml
+server:
+  host: "localhost"
+  port: 8080
+
+database:
+  user: "root"
+  password: "password"
+  host: "localhost"
+  port: 3306
+```
