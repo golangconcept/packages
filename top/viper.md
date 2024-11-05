@@ -40,3 +40,42 @@ database:
   host: "localhost"
   port: 3306
 ```
+
+```go
+// main.go
+
+package main
+
+import (
+    "fmt"
+    "github.com/spf13/viper"
+    "log"
+)
+
+func main() {
+    // Set the name of the configuration file (without the extension)
+    viper.SetConfigName("config")
+
+    // Add the path where the config file is located
+    viper.AddConfigPath("./config")
+
+    // Enable automatic environment variable reading
+    viper.AutomaticEnv()
+
+    // Read the configuration file
+    err := viper.ReadInConfig()
+    if err != nil {
+        log.Fatalf("Error reading config file, %s", err)
+    }
+
+    // Access the values using Viper
+    host := viper.GetString("server.host")
+    port := viper.GetInt("server.port")
+    dbUser := viper.GetString("database.user")
+    dbPassword := viper.GetString("database.password")
+
+    // Print the values
+    fmt.Printf("Server: %s:%d\n", host, port)
+    fmt.Printf("Database: %s (Password: %s)\n", dbUser, dbPassword)
+}
+```
