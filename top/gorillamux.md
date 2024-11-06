@@ -12,3 +12,10 @@ It is often used for building REST `APIs`, `web services`, or any kind of web ap
 - `Subrouters`: Allows you to create groups of routes with shared middleware or other configurations.
 - `Middleware support`: You can easily add custom middleware to routes.
 - `Path matching`: Supports `wildcard` and path parameter matching.
+
+### Installation
+
+To use gorilla/mux, you can install it using go get:
+
+```sh
+go get -u github.com/gorilla/mux
